@@ -1,6 +1,7 @@
 import java.io.File
 
-private val filename = "src/input/1202AlarmInput"
+private val filename = "src/input/Day_2" +
+        "_1202AlarmInput"
 
 fun convertInputToIntList(filename: String): List<Int> {
     return File(filename).readText().split(',').map { it.toInt() }

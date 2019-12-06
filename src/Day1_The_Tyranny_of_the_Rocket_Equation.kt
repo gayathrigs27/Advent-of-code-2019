@@ -1,7 +1,7 @@
 import java.io.File
 import kotlin.math.max
 
-private val filename = "src/input/TheTyrannyoftheRocketEquationInput"
+private val filename = "src/input/Day_1_TheTyrannyoftheRocketEquationInput"
 
 fun calculateFuelForModule(mass: Int): Int {
     return max((mass / 3) - 2,0)
