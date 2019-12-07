@@ -1,4 +1,3 @@
-import java.io.File
 import kotlin.math.max
 
 private val filename = "src/input/Day_1_TheTyrannyoftheRocketEquationInput"
@@ -8,7 +7,7 @@ fun calculateFuelForModule(mass: Int): Int {
 }
 
 fun fuelRequiredForModule(filename: String): Int {
-    val readLines: List<String> = File(filename).readLines()
+    val readLines: List<String> = helpers.convertLineInputToStringList(filename)
     return readLines.sumBy { calculateFuelForModule(it.toInt()) }
 }
 
@@ -23,7 +22,7 @@ fun calculateTotalFuel(mass: Int): Int {
 }
 
 fun totalFuelRequired(filename: String): Int {
-    val readLines: List<String> = File(filename).readLines()
+    val readLines: List<String> = helpers.convertLineInputToStringList(filename)
     return readLines.sumBy { calculateTotalFuel(it.toInt()) }
 }
 

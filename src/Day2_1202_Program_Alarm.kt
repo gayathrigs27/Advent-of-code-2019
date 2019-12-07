@@ -1,11 +1,5 @@
-import java.io.File
+private val filename = "src/input/Day_2_1202AlarmInput"
 
-private val filename = "src/input/Day_2" +
-        "_1202AlarmInput"
-
-fun convertInputToIntList(filename: String): List<Int> {
-    return File(filename).readText().split(',').map { it.toInt() }
-}
 
 fun programAlarm(input: List<Int>, noun: Int, verb: Int): Int {
     val opcodes = input.toMutableList()
@@ -31,7 +25,7 @@ fun findInput(opcodeList: List<Int>): Int {
 }
 
 fun main() {
-    val opcodeList = convertInputToIntList(filename)
+    val opcodeList = helpers.convertInputToIntList(filename,',')
     val noun =12
     val verb =2
     println("value in position 0:${programAlarm(opcodeList,noun,verb)}")
